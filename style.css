@@ -197,6 +197,8 @@ section{
 .hero{
   position: relative;
   max-width: none;
+  padding-left: 0;
+  padding-right: 0;
   padding-top: calc(var(--header-h) + 90px);
   padding-bottom: 90px;
   min-height: 100vh;
@@ -221,6 +223,7 @@ section{
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
+  padding: 0 32px;
 }
 .hero-content h1{
   font-family: var(--mono);
@@ -518,6 +521,8 @@ section{
 
 @media (max-width: 480px){
   section{ padding: 64px 20px; }
+  .hero{ padding-left: 0; padding-right: 0; }
+  .hero-grid{ padding: 0 20px; }
   .service-card{ padding: 28px; }
   .hero-actions{ flex-direction: column; align-items: stretch; }
 }
