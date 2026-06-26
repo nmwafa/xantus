@@ -219,6 +219,8 @@ section{
   gap: 64px;
   align-items: center;
   width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
 }
 .hero-content h1{
   font-family: var(--mono);
