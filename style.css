@@ -196,6 +196,7 @@ section{
 
 .hero{
   position: relative;
+  max-width: none;
   padding-top: calc(var(--header-h) + 90px);
   padding-bottom: 90px;
   min-height: 100vh;
@@ -208,9 +209,9 @@ section{
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at 12% 18%, var(--red-glow), transparent 38%),
-    radial-gradient(circle at 88% 78%, var(--blue-glow), transparent 42%);
-  opacity: 0.25;
+    radial-gradient(circle at 12% 18%, var(--red-glow), transparent 42%),
+    radial-gradient(circle at 88% 78%, var(--blue-glow), transparent 45%);
+  opacity: 0.45;
 }
 .hero-grid{
   display: grid;
