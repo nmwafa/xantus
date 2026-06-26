@@ -168,15 +168,14 @@ section{
 .nav-links a:not(.nav-cta):hover::after,
 .nav-links a.active::after{ width: 100%; }
 
-.nav-cta{
+.nav-links a.nav-cta{
   background: var(--red-soft);
   border: 1px solid var(--red);
   color: var(--text) !important;
-  padding: 10px 24px;
+  padding: 8px 16px;
   border-radius: 4px;
-  margin-left: 8px;
 }
-.nav-cta:hover{ background: var(--red); color: var(--bg) !important; }
+.nav-links a.nav-cta:hover{ background: var(--red); color: var(--bg) !important; }
 
 .nav-toggle{
   display: none;
