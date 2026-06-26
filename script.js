@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const action = form.getAttribute('action') || '';
       if (action.includes('YOUR_FORM_ID')) {
-        statusEl.textContent = '[ERROR] form endpoint not configured yet — see README.md to connect an email backend.';
+        statusEl.textContent = '[ERROR] form endpoint not configured yet.';
         statusEl.className = 'form-status err';
         return;
       }
@@ -137,11 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
           statusEl.className = 'form-status ok';
           form.reset();
         } else {
-          statusEl.textContent = '[ERROR] something went wrong — please email contact@xantus.dev directly.';
+          statusEl.textContent = '[ERROR] something went wrong — please email maswafa@bugcrowdninja.com directly.';
           statusEl.className = 'form-status err';
         }
       } catch (err) {
-        statusEl.textContent = '[ERROR] could not reach the server — please email contact@xantus.dev directly.';
+        statusEl.textContent = '[ERROR] could not reach the server — please email maswafa@bugcrowdninja.com directly.';
         statusEl.className = 'form-status err';
       } finally {
         submitBtn.disabled = false;
