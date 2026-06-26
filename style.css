@@ -172,10 +172,9 @@ section{
   background: var(--red-soft);
   border: 1px solid var(--red);
   color: var(--text) !important;
-  padding: 10px 22px;
-  border-radius: 6px;
-  line-height: 1;
-  margin-left: 6px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  margin-left: 8px;
 }
 .nav-cta:hover{ background: var(--red); color: var(--bg) !important; }
 
