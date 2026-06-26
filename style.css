@@ -522,7 +522,7 @@ section{
 @media (max-width: 480px){
   section{ padding: 64px 20px; }
   .hero{ padding-left: 0; padding-right: 0; }
-  .hero-grid{ padding: 0 20px; }
+  .hero-grid{ padding: 0 28px; }
   .service-card{ padding: 28px; }
   .hero-actions{ flex-direction: column; align-items: stretch; }
 }
