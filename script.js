@@ -67,11 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const lines = [
-    '$ xantus scan --target your-app.com',
+    '$ xantus run --services pentest,sysadmin,data',
     '[*] reconnaissance ............ done',
-    '[*] vulnerability checks ...... done',
     '[*] hardening review .......... done',
-    '[OK] report ready — let\'s talk'
+    '[*] dataset analysis .......... done',
+    '[OK] insights ready — let\'s talk'
   ];
 
   if (typedEl) {
