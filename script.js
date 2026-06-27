@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '[*] reconnaissance ............ done',
     '[*] hardening review .......... done',
     '[*] dataset analysis .......... done',
-    '[OK] insights ready — let\'s talk'
+    '[OK] insights ready'
   ];
 
   if (typedEl) {
