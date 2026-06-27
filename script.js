@@ -113,6 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      if (!form.checkValidity()) {
+        statusEl.textContent = 'Please fill out all required fields.';
+        statusEl.className = 'form-status err';
+        return;
+      }
+
       const action = form.getAttribute('action') || '';
       if (action.includes('YOUR_FORM_ID')) {
         statusEl.textContent = '[ERROR] form endpoint not configured yet.';
@@ -137,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
           statusEl.className = 'form-status ok';
           form.reset();
         } else {
-          statusEl.textContent = '[ERROR] something went wrong — please email maswafa@bugcrowdninja.com directly.';
+          statusEl.textContent = '[ERROR] something went wrong. Please email maswafa@bugcrowdninja.com directly.';
           statusEl.className = 'form-status err';
         }
       } catch (err) {
