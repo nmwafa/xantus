@@ -12,12 +12,16 @@
   --blue:      #3d7396;   /* muted steel blue — defensive / sysadmin */
   --blue-soft: rgba(61,115,150,0.14);
   --blue-glow: rgba(61,115,150,0.35);
+  --green:      #4f8f68;   /* muted forest green — analytical / data */
+  --green-soft: rgba(79,143,104,0.14);
+  --green-glow: rgba(79,143,104,0.35);
+ 
   --text:      #e9e6dd;   /* bone — primary text */
   --text-dim:  #8c8e96;   /* mist — secondary text */
-
+ 
   --mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
   --sans: 'Inter', -apple-system, sans-serif;
-
+ 
   --container: 1180px;
   --header-h: 76px;
 }
@@ -211,8 +215,9 @@ section{
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at 12% 18%, var(--red-glow), transparent 42%),
-    radial-gradient(circle at 88% 78%, var(--blue-glow), transparent 45%);
+    radial-gradient(circle at 12% 18%, var(--red-glow), transparent 38%),
+    radial-gradient(circle at 88% 78%, var(--blue-glow), transparent 42%),
+    radial-gradient(circle at 55% 100%, var(--green-glow), transparent 40%); /* NEW: third glow blob for data analysis */
   opacity: 0.45;
 }
 .hero-grid{
@@ -234,6 +239,8 @@ section{
   margin-bottom: 24px;
 }
 .accent-blue{ color: var(--blue); }
+.accent-red{ color: var(--red); }
+.accent-green{ color: var(--green); }
 .hero-lead{
   color: var(--text-dim);
   font-size: 17px;
@@ -319,11 +326,13 @@ section{
 .service-card:last-child{ margin-bottom: 0; }
 .service-red{ border-top: 2px solid var(--red); }
 .service-blue{ border-top: 2px solid var(--blue); }
+.service-green{ border-top: 2px solid var(--green); }
 
 .service-head{ display: flex; align-items: center; gap: 20px; margin-bottom: 22px; }
 .service-icon{ width: 52px; height: 52px; flex-shrink: 0; }
 .service-red .service-icon{ color: var(--red); }
 .service-blue .service-icon{ color: var(--blue); }
+.service-green .service-icon{ color: var(--green); }
 
 .service-tag{
   display: inline-block;
@@ -334,6 +343,7 @@ section{
 }
 .tag-red{ color: var(--red); }
 .tag-blue{ color: var(--blue); }
+.tag-green{ color: var(--green); }
 .service-heading h3{ font-size: 23px; font-weight: 600; }
 
 .service-intro{ color: var(--text-dim); max-width: 700px; margin-bottom: 32px; }
@@ -343,8 +353,72 @@ section{
 .tick{ font-family: var(--mono); font-size: 13px; margin-top: 2px; flex-shrink: 0; }
 .tick-red{ color: var(--red); }
 .tick-blue{ color: var(--blue); }
+.tick-green{ color: var(--green); }
 .service-list strong{ display: block; font-size: 15px; margin-bottom: 4px; }
 .service-list p{ color: var(--text-dim); font-size: 14px; line-height: 1.55; }
+
+/* ==========================================================================
+   Team
+   ========================================================================== */
+ 
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.team-card{
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.team-red{ border-top: 2px solid var(--red); }
+.team-blue{ border-top: 2px solid var(--blue); }
+.team-green{ border-top: 2px solid var(--green); }
+ 
+.team-avatar{
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.team-avatar svg{ width: 44px; height: 44px; }
+.team-red .team-avatar{ color: var(--red); border-color: var(--red); }
+.team-blue .team-avatar{ color: var(--blue); border-color: var(--blue); }
+.team-green .team-avatar{ color: var(--green); border-color: var(--green); }
+ 
+.team-name{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.team-linkedin{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  margin-bottom: 18px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.team-linkedin svg{ width: 16px; height: 16px; }
+.team-red .team-linkedin:hover{ color: var(--red); border-color: var(--red); }
+.team-blue .team-linkedin:hover{ color: var(--blue); border-color: var(--blue); }
+.team-green .team-linkedin:hover{ color: var(--green); border-color: var(--green); }
+ 
+.team-bio{ color: var(--text-dim); font-size: 14px; line-height: 1.6; max-width: 280px; }
 
 /* ==========================================================================
    Process
@@ -491,6 +565,7 @@ section{
   .hero-terminal{ order: -1; }
   .about-grid{ grid-template-columns: 1fr; gap: 36px; }
   .service-list{ grid-template-columns: 1fr; }
+  .team-grid{ grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
   .process-steps{ grid-template-columns: repeat(2, 1fr); }
   .contact-grid{ grid-template-columns: 1fr; }
 }
