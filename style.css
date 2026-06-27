@@ -562,7 +562,7 @@ section{
 @media (max-width: 920px){
   section{ padding: 80px 24px; }
   .hero-grid{ grid-template-columns: 1fr; }
-  .hero-terminal{ order: -1; }
+  .hero-terminal{ display: none; }
   .about-grid{ grid-template-columns: 1fr; gap: 36px; }
   .service-list{ grid-template-columns: 1fr; }
   .team-grid{ grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
