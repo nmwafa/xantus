@@ -390,8 +390,15 @@ section{
   background: var(--bg);
   border: 1px solid var(--border);
   margin-bottom: 20px;
+  overflow: hidden;
 }
-.team-avatar svg{ width: 44px; height: 44px; }
+.team-avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .team-red .team-avatar{ color: var(--red); border-color: var(--red); }
 .team-blue .team-avatar{ color: var(--blue); border-color: var(--blue); }
 .team-green .team-avatar{ color: var(--green); border-color: var(--green); }
