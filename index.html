@@ -1,306 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XANTUS — Penetration Testing, Linux Administration &amp; Data Analysis</title>
-<meta name="description" content="XANTUS provides web penetration testing, Linux system administration, and data analysis: setup, configuration, hardening, monitoring, and turning raw data into decisions, for teams who need to know exactly where they stand.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307080a'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='18' fill='%23b3404b' text-anchor='middle'%3E%3E%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07080a">
+  <title>XANTUS: Web Security, Linux System Administration & Data Analysis</title>
+  <meta name="description"
+    content="XANTUS provides web security assessment, penetration testing, Linux system administration, server hardening, and data analysis for startups, developers, SMEs, and growing businesses.">
+  <meta name="keywords"
+    content="xantus, xantus id, web security assessment, penetration testing, pentest website, web security Indonesia, Linux system administration, Linux server administration, server hardening, data analysis, ">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="XANTUS">
+  <meta property="og:title" content="XANTUS: Web Security, Linux System Administration & Data Analysis">
+  <meta property="og:description"
+    content="Practical technical services for growing businesses: web security assessment, Linux system administration, and data analysis.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="XANTUS">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#home" class="logo" data-scroll>
-      <span class="logo-bracket">[</span>XANTUS<span class="logo-bracket">]</span>
-    </a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" data-scroll data-nav>Home</a>
-      <a href="#about" data-scroll data-nav>About</a>
-      <a href="#services" data-scroll data-nav>Services</a>
-      <a href="#team" data-scroll data-nav>Team</a>
-      <a href="#process" data-scroll data-nav>Process</a>
-      <a href="#contact" data-scroll data-nav class="nav-cta">Get in Touch</a>
-    </nav>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main id="main">
-
-  <!-- HOME -->
-  <section id="home" class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-grid">
-      <div class="hero-content">
-        <h1>Fortified <span class="accent-blue">Security</span>. Data-Driven Decisions.</h1> <!-- <span class="accent-red"></span> -->
-        <p class="hero-lead">We provides web penetration testing, Linux system administration, and data analysis — for teams who need to know exactly where they stand, someone who can fix what's found, and a clear read on what the numbers are telling them.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary" data-scroll>Request a Free Consultation</a>
-          <a href="#services" class="btn btn-ghost" data-scroll>Explore Services</a>
-        </div>
-      </div>
-      <div class="hero-terminal" aria-hidden="true">
-        <div class="terminal-window">
-          <div class="terminal-bar">
-            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
-            <p class="terminal-title">xantus.sh</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo" aria-label="XANTUS home"><span class="logo-bracket">[</span>XANTUS<span
+          class="logo-bracket">]</span></a>
+      <nav class="nav-links" id="navLinks">
+        <div class="nav-item-dropdown" id="navItemDropdown">
+          <a href="#services" class="dropdown-trigger" id="dropdownTrigger" role="button" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Services</span> <span class="dropdown-chevron">▼</span>
+          </a>
+          <div class="nav-dropdown" id="servicesDropdown">
+            <a href="/pentest/">Web Security Assessment</a>
+            <a href="/sysadmin/">Linux System Administration</a>
+            <a href="/data-analysis/">Data Analysis</a>
           </div>
-          <pre class="terminal-body"><code id="typedCode"></code><span class="cursor">_</span></pre>
+        </div>
+        <a href="https://gopentest.hight.id/" target="_blank" rel="noopener">GoPentest</a>
+        <a href="/#research">Research</a>
+        <a href="/#about">About</a>
+        <a href="/#contact" class="nav-cta">Talk to XANTUS</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main-content" class="page-shell">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1>Know What You're <span class="accent-blue">Running</span>.</h1>
+            <p class="hero-lead">Whether it's an application, a server, or a dataset, we help you understand what you
+              have, find what needs attention, and decide what to do next.</p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Talk to XANTUS</a>
+              <a href="https://gopentest.hight.id/" target="_blank" rel="noopener" class="btn btn-ghost">Check Your
+                Website with GoPentest ↗</a>
+            </div>
+            <div class="hero-microcopy"><span>Web Security</span><span class="dot">·</span><span>Linux System
+                Administration</span><span class="dot">·</span><span>Data Analysis</span>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="problems-section" style="border-top:1px solid var(--border);">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Technology Problems Rarely Happen at the Right Time.</h2>
+          <p class="section-desc">You are focused on shipping product and growing the business. We help with the
+            technical gaps that are easy to postpone.</p>
+        </div>
+        <div class="problems-grid">
+          <div class="problem-card">
+            <h3>“Is our application actually secure?”</h3>
+            <p>Automated checks are useful, but they do not cover every authorization, authentication, API, or
+              business-logic path.</p>
+          </div>
+          <div class="problem-card">
+            <h3>“Who will take care of our server?”</h3>
+            <p>We help keep Linux infrastructure maintained, hardened, monitored, backed up, and easier to operate.</p>
+          </div>
+          <div class="problem-card">
+            <h3>“We have data. Now what?”</h3>
+            <p>We turn raw spreadsheets, transactions, logs, and operational data into useful analysis, dashboards, and
+              decisions.</p>
+          </div>
+        </div>
+        <div class="problem-bridge"><span>One technical team across <strong>security</strong>,
+            <strong>infrastructure</strong>, and <strong>data</strong>.</span><a href="#contact"
+            class="btn btn-sm btn-ghost">Talk to our engineers →</a></div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Three disciplines. Built for practical work.</h2>
+          <p class="section-desc">Choose the problem first. We will help define the right scope instead of forcing a
+            package that you do not need.</p>
+        </div>
+        <div class="services-triad">
+          <article class="service-summary-card card-secure">
+            <div>
+              <h3>Web Security Assessment</h3>
+              <p>Find and validate vulnerabilities across web applications and APIs, with clear evidence and remediation
+                guidance.</p>
+            </div><a href="/pentest/" class="service-cta-link">Explore Security <span>→</span></a>
+          </article>
+          <article class="service-summary-card card-run">
+            <div>
+              <h3>Linux System Administration</h3>
+              <p>Provisioning, hardening, maintenance, monitoring, backup, troubleshooting, and server operations.</p>
+            </div><a href="/sysadmin/" class="service-cta-link">Explore Infrastructure <span>→</span></a>
+          </article>
+          <article class="service-summary-card card-understand">
+            <div>
+              <h3>Data Analysis</h3>
+              <p>Clean data, build dashboards, analyze performance, and turn raw business data into useful insights.</p>
+            </div><a href="/data-analysis/" class="service-cta-link">Explore Data <span>→</span></a>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="section-head">
-      <h2>A small team that works close to the system, not above it</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Most security, infrastructure, and data work doesn't fail because the tools are missing. It fails because no one took the time to actually look. We test what you've shipped the way an attacker would, we run the servers underneath it the way it should have been run from day one, and we dig through the data until a number actually means something.</p>
-        <p>We work directly with the people who own the system — founders, engineers, IT leads, analysts — with no sales layer in between. That means fewer slide decks, more terminal output, and reports you can actually act on.</p>
-      </div>
-      <ul class="about-facts">
-        <li><span class="fact-label">Approach</span><span class="fact-value">Manual-first work, not just automated output</span></li>
-        <li><span class="fact-label">Scope</span><span class="fact-value">Web apps, Linux infrastructure &amp; data pipelines</span></li>
-        <li><span class="fact-label">Engagement</span><span class="fact-value">Project-based work or ongoing retainer</span></li>
-        <li><span class="fact-label">Reporting</span><span class="fact-value">Plain-language findings, no jargon walls</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="services">
-    <div class="section-head">
-      <h2>Three disciplines. One goal: nothing left to chance.</h2>
-    </div>
-
-    <div class="service-card service-red">
-      <div class="service-head">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 4 L42 11 V22 C42 34 34 41 24 44 C14 41 6 34 6 22 V11 Z" stroke="currentColor" stroke-width="2"/>
-            <path d="M16 24 L22 30 L33 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+    <section id="security-platform" class="security-spotlight">
+      <div class="container">
+        <div class="section-head" style="margin-bottom:24px;">
+          <h2>Scan Fast. Test Deep.</h2>
+          <p class="section-desc">GoPentest is our dedicated security testing platform. Use it for quick automated
+            visibility, then move to human-led testing when deeper validation is needed.</p>
         </div>
-        <div class="service-heading">
-          <h3>Web Security Assessment</h3>
+        <div class="service-link-grid">
+          <a href="https://gopentest.hight.id/" target="_blank" rel="noopener" class="btn btn-primary">Scan Now ↗</a>
         </div>
       </div>
-      <p class="service-intro">We attack your application the same way a real adversary would: manually, methodically, and with every step documented, so you find the gaps before someone else does.</p>
-      <ul class="service-list">
-        <li><span class="tick tick-red">[+]</span><div>Reconnaissance &amp; Information Gathering</div></li>
-        <li><span class="tick tick-red">[+]</span><div>Automated &amp; Manual Vulnerability Assessment</div></li>
-        <li><span class="tick tick-red">[+]</span><div>Authentication &amp; Session Security</div></li>
-        <li><span class="tick tick-red">[+]</span><div>Authorization &amp; Business Logic Testing</div></li>
-        <li><span class="tick tick-red">[+]</span><div>API &amp; Backend Testing</div></li>
-        <li><span class="tick tick-red">[+]</span><div>Configuration &amp; Infrastructure Review</div></li>
-        <li><span class="tick tick-red">[+]</span><div>Detailed, Rated Reporting</div></li>
-        <li><span class="tick tick-red">[+]</span><div>Remediation Support &amp; Retesting</div></li>
-      </ul>
-    </div>
+    </section>
 
-    <div class="service-card service-blue">
-      <div class="service-head">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="6" width="32" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
-            <rect x="8" y="19" width="32" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
-            <rect x="8" y="32" width="32" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
-            <circle cx="14" cy="11" r="1.6" fill="currentColor"/>
-            <circle cx="14" cy="24" r="1.6" fill="currentColor"/>
-            <circle cx="14" cy="37" r="1.6" fill="currentColor"/>
-          </svg>
+    <section>
+      <div class="container">
+        <div class="section-head center">
+          <h2>Start Small. Go Deeper When Needed.</h2>
+          <p class="section-desc">Not every application needs a full penetration test on day one.</p>
         </div>
-        <div class="service-heading">
-          <h3>Linux Administration</h3>
-        </div>
-      </div>
-      <p class="service-intro">From the first install to long-term upkeep, we set up and run Linux infrastructure that's stable, documented, and built to resist the same attacks we test for.</p>
-      <ul class="service-list">
-        <li><span class="tick tick-blue">[+]</span><div>Server Setup &amp; Provisioning</div></li>
-        <li><span class="tick tick-blue">[+]</span><div>Network &amp; Service Configuration</div></li>
-        <li><span class="tick tick-blue">[+]</span><div>System Hardening</div></li>
-        <li><span class="tick tick-blue">[+]</span><div>User &amp; Access Management</div></li>
-        <li><span class="tick tick-blue">[+]</span><div>Monitoring &amp; Logging</div></li>
-        <li><span class="tick tick-blue">[+]</span><div>Backup &amp; Disaster Recovery</div></li>
-        <li><span class="tick tick-blue">[+]</span><div>Patch &amp; Update Management</div></li>
-        <li><span class="tick tick-blue">[+]</span><div>System Maintenance</div></li>
-      </ul>
-    </div>
-
-    <div class="service-card service-green">
-      <div class="service-head">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 40 H42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <rect x="10" y="26" width="6" height="14" stroke="currentColor" stroke-width="2"/>
-            <rect x="21" y="16" width="6" height="24" stroke="currentColor" stroke-width="2"/>
-            <rect x="32" y="8" width="6" height="32" stroke="currentColor" stroke-width="2"/>
-          </svg>
-        </div>
-        <div class="service-heading">
-          <h3>Data Analysis</h3>
+        <div class="stepper-horizontal">
+          <div class="step-item"><span class="step-index">STEP 01</span>
+            <h4>GoPentest Scan</h4>
+            <p>Fast automated visibility into public exposure.</p>
+          </div>
+          <div class="step-item"><span class="step-index">STEP 02</span>
+            <h4>Manual Assessment</h4>
+            <p>Targeted human-led testing within agreed scope.</p>
+          </div>
+          <div class="step-item"><span class="step-index">STEP 03</span>
+            <h4>Deeper Testing</h4>
+            <p>Broader application, API, role, or business-logic testing when needed.</p>
+          </div>
+          <div class="step-item"><span class="step-index">STEP 04</span>
+            <h4>Report</h4>
+            <p>Evidence, impact, severity, and remediation guidance.</p>
+          </div>
+          <div class="step-item"><span class="step-index">STEP 05</span>
+            <h4>Remediate &amp; Retest</h4>
+            <p>Support fixes and verify them within scope.</p>
+          </div>
+          <div class="step-item"><span class="step-index">STEP 06</span>
+            <h4>Ongoing Support</h4>
+            <p>Periodic reviews or infrastructure support where appropriate.</p>
+          </div>
         </div>
       </div>
-      <p class="service-intro">The same instinct we use to find a vulnerability or fix a server, we apply to data: dig past the surface number until it actually tells you something you can act on.</p>
-      <ul class="service-list">
-        <li><span class="tick tick-green">[+]</span><div>Data Cleaning &amp; Preparation</div></li>
-        <li><span class="tick tick-green">[+]</span><div>Exploratory Data Analysis</div></li>
-        <li><span class="tick tick-green">[+]</span><div>Statistical Analysis &amp; Hypothesis Testing</div></li>
-        <li><span class="tick tick-green">[+]</span><div>Dashboard &amp; Visualization Design</div></li>
-        <li><span class="tick tick-green">[+]</span><div>Reporting Automation</div></li>
-        <li><span class="tick tick-green">[+]</span><div>Predictive &amp; Trend Analysis</div></li>
-        <li><span class="tick tick-green">[+]</span><div>Security &amp; Log Data Analysis</div></li>
-        <li><span class="tick tick-green">[+]</span><div>Actionable Recommendations</div></li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- TEAM -->
-  <section id="team" class="team">
-    <div class="section-head">
-      <h2>Our professional team</h2>
-    </div>
-    <div class="team-grid">
- 
-      <article class="team-card team-red">
-        <div class="team-avatar">
-          <img src="https://gopentest.hight.id/public/img/team/anggi-prayitno.jpeg" alt="Anggi Prayitno">
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Who We Work With</h2>
+          <p class="section-desc">Our strongest fit is with teams that have real systems but do not want to build every
+            technical specialty in-house.</p>
         </div>
-        <h3 class="team-name">Anggi Prayitno</h3>
-        <a class="team-linkedin" href="https://www.linkedin.com/in/anggi-prayitno/" target="_blank" rel="noopener" aria-label="Anggi Prayitno on LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM1.5 8.75h3v12h-3v-12zM9 8.75h2.9v1.64h.04c.4-.78 1.5-1.64 3.1-1.64 3.3 0 3.9 2.18 3.9 5v7h-3v-6.2c0-1.48 0-3.38-2.1-3.38s-2.4 1.58-2.4 3.28v6.3H9v-12z"/></svg>
-        </a>
-        <p class="team-bio">A specialist in cybersecurity and penetration testing with strong expertise in vulnerability assessment, cyber defense, and web security testing. Skilled in developing web-based security tools and API integrations.</p>
-      </article>
- 
-      <article class="team-card team-blue">
-        <div class="team-avatar">
-          <img src="https://gopentest.hight.id/public/img/team/muhammad-wafa.png" alt="Nur Muhammad Wafa">
+        <div class="audiences-grid">
+          <div class="audience-card">
+            <h3>Software Houses</h3>
+            <p>External security testing for client applications before handover or release.</p>
+          </div>
+          <div class="audience-card">
+            <h3>Startups</h3>
+            <p>Practical security and infrastructure support without building a specialist team from day one.</p>
+          </div>
+          <div class="audience-card">
+            <h3>SMEs</h3>
+            <p>Security checks, Linux operations, and data support for growing digital businesses.</p>
+          </div>
+          <div class="audience-card">
+            <h3>Developers</h3>
+            <p>An independent second opinion on application security, architecture, and deployment.</p>
+          </div>
         </div>
-        <h3 class="team-name">Nur Muhammad Wafa</h3>
-        <a class="team-linkedin" href="https://www.linkedin.com/in/nmwafa/" target="_blank" rel="noopener" aria-label="Nur Muhammad Wafa on LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM1.5 8.75h3v12h-3v-12zM9 8.75h2.9v1.64h.04c.4-.78 1.5-1.64 3.1-1.64 3.3 0 3.9 2.18 3.9 5v7h-3v-6.2c0-1.48 0-3.38-2.1-3.38s-2.4 1.58-2.4 3.28v6.3H9v-12z"/></svg>
-        </a>
-        <p class="team-bio">Cybersecurity professional skilled in penetration testing using OWASP WSTG, vulnerability assessment, linux system administration, and secure coding with hands-on experience across Linux environments and networking.</p>
-      </article>
- 
-      <article class="team-card team-green">
-        <div class="team-avatar">
-          <img src="https://gopentest.hight.id/public/img/team/sigit-dwiantoro.jpg" alt="Sigit Dwiantoro">
+        <div class="partner-banner">
+          <div class="partner-text">
+            <h3>Build Websites. We'll Test Them.</h3>
+            <p>Partner with XANTUS as your external security testing arm. Clear scope, NDA available, and direct
+              communication with the technical team.</p>
+          </div><a href="#contact" class="btn btn-primary" data-prefill="Partner Program / Software House">Become a
+            Security Partner</a>
         </div>
-        <h3 class="team-name">Sigit Dwiantoro</h3>
-        <a class="team-linkedin" href="https://www.linkedin.com/in/sigit-dwiantoro-392872227/" target="_blank" rel="noopener" aria-label="Sigit Dwiantoro on LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM1.5 8.75h3v12h-3v-12zM9 8.75h2.9v1.64h.04c.4-.78 1.5-1.64 3.1-1.64 3.3 0 3.9 2.18 3.9 5v7h-3v-6.2c0-1.48 0-3.38-2.1-3.38s-2.4 1.58-2.4 3.28v6.3H9v-12z"/></svg>
-        </a>
-        <p class="team-bio">Data Analyst who bridges management strategy and technical analytics, he recently developed a Retail Network Intelligence Dashboard that visualized 557 outlets nationwide to track operational compliance and geographic insights. A management graduate skilled in Python, SQL, Power BI, with a keen interest in fraud prevention.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section id="process" class="process">
-    <div class="section-head">
-      <h2>A straightforward process, in order</h2>
-    </div>
-    <ol class="process-steps">
-      <li><span class="step-num">01</span><h3>Free Consultation</h3><p>We talk through your goals, your environment, and what's actually worrying you. No cost, no commitment.</p></li>
-      <li><span class="step-num">02</span><h3>Scoping &amp; Proposal</h3><p>We define exactly what's covered, what isn't, and send a clear, fixed proposal before anything starts.</p></li>
-      <li><span class="step-num">03</span><h3>Execution</h3><p>Testing, infrastructure work, or analysis is carried out in a controlled window, with progress documented as we go.</p></li> <!-- MODIFIED: wording now includes analysis -->
-      <li><span class="step-num">04</span><h3>Reporting &amp; Handover</h3><p>You receive findings or documentation written in plain language, not just raw scanner output.</p></li>
-      <li><span class="step-num">05</span><h3>Follow-Up</h3><p>Retesting or check-ins to confirm fixes hold and the system stays in the state you expect.</p></li>
-    </ol>
-  </section>
-
-  <!-- CONSULTATION BANNER -->
-  <section class="consult-banner">
-    <div class="consult-inner">
-      <h2>Not sure which service you need — or if you need one at all?</h2>
-      <p>Book a free, no-obligation consultation first. We'll review what you have, ask a few direct questions, and tell you honestly what matters and what doesn't, even if that means saying you don't need us yet.</p>
-      <a href="#contact" class="btn btn-primary" data-scroll>Talk to Us — No Cost, No Pressure</a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="section-head">
-      <h2>Tell us what you're working with</h2>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Direct Contact</h3>
-        <p>Prefer to skip the form? Reach out directly and we'll get back to you within one business day.</p>
-        <a class="contact-email" href="mailto:service@xantus.web.id">service@xantus.web.id</a>
       </div>
+    </section>
 
-      <form id="contactForm" class="contact-form" action="https://formspree.io/f/xqevpvze" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="New inquiry from [XANTUS]">
-
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required>
+    <section id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <h2>A straightforward process, in order.</h2>
+          <p class="section-desc">From first conversation to validated remediation, the scope stays visible.</p>
         </div>
-
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
+        <div class="steps-six">
+          <div class="step-six-card"><span class="step-num-six">01 // DISCOVER</span>
+            <p>Understand the environment, objectives, and business concerns.</p>
+          </div>
+          <div class="step-six-card"><span class="step-num-six">02 // SCOPE</span>
+            <p>Define targets, access, rules of engagement, and deliverables.</p>
+          </div>
+          <div class="step-six-card"><span class="step-num-six">03 // ASSESS</span>
+            <p>Run controlled testing using appropriate automated and manual techniques.</p>
+          </div>
+          <div class="step-six-card"><span class="step-num-six">04 // REPORT</span>
+            <p>Document evidence, impact, and prioritized remediation guidance.</p>
+          </div>
+          <div class="step-six-card"><span class="step-num-six">05 // REMEDIATE</span>
+            <p>Clarify findings and help your team understand the recommended changes.</p>
+          </div>
+          <div class="step-six-card"><span class="step-num-six">06 // RETEST</span>
+            <p>Verify fixes within the agreed engagement scope.</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="form-row">
-          <label for="company">Company <span class="optional">(optional)</span></label>
-          <input type="text" id="company" name="company" autocomplete="organization">
+    <section id="research" style="background:#090b0f;border-top:1px solid var(--border);">
+      <div class="container">
+        <div class="section-head">
+          <h2>We Don't Just Talk About Security.</h2>
+          <p class="section-desc">Research, vulnerability mechanics, systems guides, and articles published by the
+            XANTUS technical team.</p>
         </div>
-
-        <div class="form-row">
-          <label for="service">Service Interested In</label>
-          <select id="service" name="service">
-            <option>Web Penetration Testing</option>
-            <option>Linux System Administration</option>
-            <option>Data Analysis</option>
-            <option>Not Sure — Free Consultation</option>
-            <option>Other</option>
-          </select>
+        <div class="research-grid">
+          <article class="research-card">
+            <div>
+              <h3>Vulnerability Scanner vs Pentest: What's the Difference?</h3>
+              <p>A practical explanation of where automated scanning ends and manual validation begins.</p>
+            </div><a href="https://gopentest.hight.id/" target="_blank" rel="noopener" class="research-read">Read more
+              ↗</a>
+          </article>
+          <article class="research-card">
+            <div>
+              <h3>5 Common Security Mistakes in Modern Web Apps</h3>
+              <p>Real-world patterns worth reviewing across modern web applications and APIs.</p>
+            </div><a href="https://gopentest.hight.id/" target="_blank" rel="noopener" class="research-read">Read more
+              ↗</a>
+          </article>
+          <article class="research-card">
+            <div>
+              <h3>How to Harden a Fresh Ubuntu VPS</h3>
+              <p>A practical baseline for SSH, firewalling, updates, users, and basic server hygiene.</p>
+            </div><a href="https://gopentest.hight.id/" target="_blank" rel="noopener" class="research-read">Read more
+              ↗</a>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div class="form-row">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder="A short description of your system and what you need help with."></textarea>
+    <section class="cross-cta-section">
+      <div class="container">
+        <div class="cross-cta-box">
+          <div class="cross-cta-text">
+            <h2>Already have a website?</h2>
+            <p>Use GoPentest for a quick automated check, then contact us when you need the results validated or
+              investigated more deeply.</p>
+          </div>
+          <div class="cross-cta-action"><a href="https://gopentest.hight.id/" target="_blank" rel="noopener"
+              class="btn btn-primary">Check it with GoPentest →</a></div>
         </div>
+      </div>
+    </section>
 
-        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Send Message</button>
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-      </form>
+    <section id="about" style="background:#080a0e;border-top:1px solid var(--border);">
+      <div class="container">
+        <div class="section-head">
+          <h2>A small team that works close to the system.</h2>
+          <p class="section-desc">We are deliberately direct: clear scope, hands-on execution, practical reporting, and
+            honest boundaries around what we can and cannot deliver internally.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Security testing, server work, and data analysis are handled by the same technical team behind XANTUS and
+              GoPentest.</p>
+            <p>When a project requires specialized expertise beyond our current core capability, we can collaborate with
+              vetted specialists rather than pretending every problem fits the same skill set.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" style="border-top:1px solid var(--border);">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Meet Our Technical Team</h2>
+          <p class="section-desc">Hands-on practitioners working directly with your systems.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card team-red">
+            <div class="team-avatar"><img src="https://gopentest.hight.id/public/img/team/anggi-prayitno.jpeg"
+                alt="Anggi Prayitno"></div>
+            <h3 class="team-name">Anggi Prayitno</h3><a class="team-linkedin"
+              href="https://www.linkedin.com/in/anggi-prayitno/" target="_blank" rel="noopener"
+              aria-label="Anggi Prayitno on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM1.5 8.75h3v12h-3v-12zM9 8.75h2.9v1.64h.04c.4-.78 1.5-1.64 3.1-1.64 3.3 0 3.9 2.18 3.9 5v7h-3v-6.2c0-1.48 0-3.38-2.1-3.38s-2.4 1.58-2.4 3.28v6.3H9v-12z" />
+              </svg></a>
+            <p class="team-bio">Security and penetration testing with a focus on vulnerability assessment, Web and API security.</p>
+          </article>
+          <article class="team-card team-blue">
+            <div class="team-avatar"><img src="https://gopentest.hight.id/public/img/team/muhammad-wafa.png"
+                alt="Nur Muhammad Wafa"></div>
+            <h3 class="team-name">Nur Muhammad Wafa</h3><a class="team-linkedin"
+              href="https://www.linkedin.com/in/nmwafa/" target="_blank" rel="noopener"
+              aria-label="Nur Muhammad Wafa on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM1.5 8.75h3v12h-3v-12zM9 8.75h2.9v1.64h.04c.4-.78 1.5-1.64 3.1-1.64 3.3 0 3.9 2.18 3.9 5v7h-3v-6.2c0-1.48 0-3.38-2.1-3.38s-2.4 1.58-2.4 3.28v6.3H9v-12z" />
+              </svg></a>
+            <p class="team-bio">Web Application Security, vulnerability assessment, Penetration Testing, and Linux system administration.</p>
+          </article>
+          <article class="team-card team-green">
+            <div class="team-avatar"><img src="https://gopentest.hight.id/public/img/team/sigit-dwiantoro.jpg"
+                alt="Sigit Dwiantoro"></div>
+            <h3 class="team-name">Sigit Dwiantoro</h3><a class="team-linkedin"
+              href="https://www.linkedin.com/in/sigit-dwiantoro-392872227/" target="_blank" rel="noopener"
+              aria-label="Sigit Dwiantoro on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM1.5 8.75h3v12h-3v-12zM9 8.75h2.9v1.64h.04c.4-.78 1.5-1.64 3.1-1.64 3.3 0 3.9 2.18 3.9 5v7h-3v-6.2c0-1.48 0-3.38-2.1-3.38s-2.4 1.58-2.4 3.28v6.3H9v-12z" />
+              </svg></a>
+            <p class="team-bio">Data analysis, Business Intelligence, Python/SQL workflows, and operational analytics.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head center">
+          <h2>Frequently Asked Questions</h2>
+          <p class="section-desc">Common questions before an engagement.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-question" type="button"><span>Do you only work with large
+                companies?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer">No. We work with startups, software houses, developers, SMEs, and growing
+              businesses. Scope is adjusted to the actual need.</div>
+          </div>
+          <div class="faq-item"><button class="faq-question" type="button"><span>Is GoPentest Quick Scan a penetration
+                test?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer">No. It provides fast automated visibility. A deeper assessment involves human-led
+              testing within an agreed scope.</div>
+          </div>
+          <div class="faq-item"><button class="faq-question" type="button"><span>Do you need source code?</span><span
+                class="faq-icon">+</span></button>
+            <div class="faq-answer">Not necessarily. Testing can be black-box, authenticated/grey-box, or code-assisted
+              depending on the objectives and scope.</div>
+          </div>
+          <div class="faq-item"><button class="faq-question" type="button"><span>Can you help fix findings?</span><span
+                class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes. Remediation guidance and retesting can be included according to the engagement
+              scope.</div>
+          </div>
+          <div class="faq-item"><button class="faq-question" type="button"><span>What if a project is beyond your
+                current capability?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer">We state that transparently and can involve an appropriate specialist where needed,
+              with clear scope and confidentiality arrangements.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="border-top:1px solid var(--border);">
+      <div class="container">
+        <div class="section-head">
+          <h2>Let's Start With Your Actual Problem.</h2>
+          <p class="section-desc">You do not need to know the exact service package. Tell us what you are running, what
+            worries you, and what you are trying to achieve.</p>
+        </div>
+        <div class="final-contact-grid">
+          <div class="contact-meta">
+            <h3>Direct Engineering Contact</h3>
+            <p>Prefer email? An engineer will reply within one business day.</p>
+            <div class="direct-contact-card">
+              <h4>PRIMARY INBOX</h4><a href="mailto:service@xantus.web.id"
+                class="direct-email">service@xantus.web.id</a>
+            </div>
+            <!-- <div class="direct-contact-card">
+              <h4>QUICK CHAT</h4><a href="https://wa.me/?text=Hello%20XANTUS" class="direct-email" target="_blank"
+                rel="noopener">WhatsApp →</a>
+            </div> -->
+          </div>
+          <div>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xqevpvze" method="POST"><input
+                type="hidden" name="_subject" value="New Inquiry from XANTUS">
+              <div class="form-group"><label for="contact-name">Name</label><input type="text" id="contact-name"
+                  name="name" required autocomplete="name"></div>
+              <div class="form-group"><label for="contact-email">Email</label><input type="email" id="contact-email"
+                  name="email" required autocomplete="email"></div>
+              <div class="form-group"><label for="contact-company">Company (optional)</label><input type="text"
+                  id="contact-company" name="company" autocomplete="organization"></div>
+              <div class="form-group"><label for="contact-service">Service Interested In</label><select
+                  id="contact-service" name="service">
+                  <option value="Web Security Assessment">Web Security Assessment</option>
+                  <option value="Linux / System Administration">Linux / System Administration</option>
+                  <option value="Data Analysis">Data Analysis</option>
+                  <option value="GoPentest / Manual Assessment">GoPentest / Manual Assessment</option>
+                  <option value="Partner Program / Software House">Partner Program / Software House</option>
+                  <option value="Not Sure — Free Consultation">Not Sure — Free Consultation</option>
+                  <option value="Other">Other</option>
+                </select></div>
+              <div class="form-group"><label for="contact-msg">Message</label><textarea id="contact-msg" name="message"
+                  rows="5" required
+                  placeholder="A short description of your system and what you need help with."></textarea></div><button
+                type="submit" class="btn btn-primary btn-submit" id="submitBtn">Send Message</button>
+              <p class="status-msg" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><span class="logo-bracket">[</span>XANTUS<span class="logo-bracket">]</span></a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/pentest/">Web Security Assessment</a></li>
+            <li><a href="/sysadmin/">Linux System Administration</a></li>
+            <li><a href="/data-analysis/">Data Analysis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#team">Technical Team</a></li>
+            <li><a href="/#how-it-works">How We Work</a></li>
+            <li><a href="/#research">Research Articles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:service@xantus.web.id">service@xantus.web.id</a></li>
+            <li><a href="https://www.linkedin.com/company/xantus-id/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 XANTUS. All rights reserved.</p>
+      </div>
     </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <a href="#home" class="logo small" data-scroll><span class="logo-bracket">[</span>XANTUS<span class="logo-bracket">]</span></a>
-    <nav class="footer-links">
-      <a href="#home" data-scroll>Home</a>
-      <a href="#about" data-scroll>About</a>
-      <a href="#services" data-scroll>Services</a>
-      <a href="#team" data-scroll>Team</a>
-      <a href="#process" data-scroll>Process</a>
-    </nav>
-    <p class="copyright">© 2026 XANTUS. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
