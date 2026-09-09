@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (dropdownTrigger && navItemDropdown) {
-    dropdownTrigger.addEventListener("click", (event) => {
-      if (window.innerWidth <= 720) {
-        event.preventDefault();
-        const open = navItemDropdown.classList.toggle("open");
-        dropdownTrigger.setAttribute("aria-expanded", String(open));
-      }
+    dropdownTrigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isOpen = navItemDropdown.classList.toggle("open");
+      dropdownTrigger.setAttribute("aria-expanded", String(isOpen));
     });
   }
 

@@ -321,6 +321,21 @@ section {
   display: flex;
   align-items: center;
   gap: 5px;
+  background: none;
+  border: 0;
+  padding: 6px 0;
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.dropdown-trigger:hover {
+  color: var(--text);
+}
+
+.nav-item-dropdown.open .dropdown-trigger {
+  color: var(--text);
 }
 .dropdown-chevron {
   font-size: 10px;
